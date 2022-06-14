@@ -1,5 +1,9 @@
+import 'package:commerce/add_cliente_page.dart';
 import 'package:commerce/add_pedido_page.dart';
 import 'package:commerce/add_produto_page.dart';
+import 'package:commerce/list_cliente_page.dart';
+import 'package:commerce/list_pedido_page.dart';
+import 'package:commerce/list_produto_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
@@ -71,7 +75,14 @@ class _HomePageState extends State<HomePage> {
                 shadowColor: Colors.blue,
                 child: InkWell(
                   splashColor: Colors.black,
-                  onTap: () => {print('Oi')},
+                  onTap: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AddClientePage(),
+                      ),
+                    )
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     width: 100,
@@ -94,7 +105,14 @@ class _HomePageState extends State<HomePage> {
                 shadowColor: Colors.blue,
                 child: InkWell(
                   splashColor: Colors.black,
-                  onTap: () => {print('Oi')},
+                  onTap: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AddPedidoPage(),
+                      ),
+                    )
+                  },
                   child: Container(
                     width: 100,
                     height: 100,
@@ -121,7 +139,14 @@ class _HomePageState extends State<HomePage> {
                 shadowColor: Colors.blue,
                 child: InkWell(
                     splashColor: Colors.black,
-                    onTap: () => {print('Oi')},
+                    onTap: () => {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ListProdutoPage(),
+                            ),
+                          )
+                        },
                     child: Container(
                       alignment: Alignment.center,
                       width: 100,
@@ -143,7 +168,12 @@ class _HomePageState extends State<HomePage> {
                 shadowColor: Colors.blue,
                 child: InkWell(
                   splashColor: Colors.black,
-                  onTap: () => {print('Oi')},
+                  onTap: () => {Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListClientePage(),
+                      ),
+                    )},
                   child: Container(
                     alignment: Alignment.center,
                     width: 100,
@@ -166,7 +196,14 @@ class _HomePageState extends State<HomePage> {
                 shadowColor: Colors.blue,
                 child: InkWell(
                   splashColor: Colors.black,
-                  onTap: () => {print('Oi')},
+                  onTap: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ListPedidoPage(),
+                      ),
+                    )
+                  },
                   child: Container(
                     width: 100,
                     height: 100,

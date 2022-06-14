@@ -91,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: ElevatedButton(
                         onPressed: () =>
                             {_formKey.currentState?.save(), sendForm()},
-                        child: const Text('Enviar'),
+                        child: const Text('Entrar'),
                       ),
                     ),
                   ],

@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:commerce/model/categoria.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -14,7 +12,6 @@ class AddProdutoPage extends StatefulWidget {
 
 class _AddProdutoPageState extends State<AddProdutoPage> {
   final GlobalKey<FormState> _formKey = new GlobalKey();
-  String _mySelection = '';
   final storage = const FlutterSecureStorage();
   String nome = '';
   String preco = '';
@@ -96,6 +93,7 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
       ),
       body: Container(
         width: double.infinity,
+        height: double.maxFinite,
         padding: const EdgeInsets.all(10),
         child: Form(
           key: _formKey,
@@ -181,7 +179,7 @@ class _AddProdutoPageState extends State<AddProdutoPage> {
               ),
               ElevatedButton(
                 onPressed: () => {_formKey.currentState?.save(), saveProduto()},
-                child: const Text('Enviar'),
+                child: const Text('Salvar produto'),
               ),
             ],
           ),
